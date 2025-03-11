@@ -4,6 +4,9 @@ namespace Darvis\ModuleDocument;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Config;
+use Livewire\Livewire;
+use Darvis\ModuleDocument\Livewire\Document\DocumentListRow;
+use Darvis\ModuleDocument\Livewire\Documentcat\DocumentcatListRow;
 use function config_path;
 use function resource_path;
 use function database_path;
@@ -34,6 +37,10 @@ class DocumentServiceProvider extends ServiceProvider
 
         // Load views
         $this->loadViewsFrom(__DIR__ . '/resources/views', 'module-document');
+
+        // Register Livewire Components
+        Livewire::component('manta.document.document-list-row', DocumentListRow::class);
+        Livewire::component('manta.documentcat.documentcat-list-row', DocumentcatListRow::class);
 
         // Publish config
         $this->publishes([

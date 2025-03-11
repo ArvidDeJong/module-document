@@ -2,8 +2,8 @@
 
 namespace Darvis\ModuleDocument\Livewire\Document;
 
-use Manta\Models\Document;
-use Manta\Models\Documentcat;
+use Darvis\ModuleDocument\Models\Document;
+use Darvis\ModuleDocument\Models\Documentcat;
 use Darvis\Manta\Services\Openai;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Route;
@@ -19,7 +19,7 @@ trait DocumentTrait
         $this->route_list = route($this->route_name . '.list');
         $this->config = module_config('Document');
         $this->fields = $this->config['fields'];
-        $this->moduleClass = 'Manta\Models\Document';
+        $this->moduleClass = 'Darvis\ModuleDocument\Models\Document';
     }
 
 

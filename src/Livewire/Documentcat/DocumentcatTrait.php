@@ -2,7 +2,7 @@
 
 namespace Darvis\ModuleDocument\Livewire\Documentcat;
 
-use Manta\Models\Documentcat;
+use Darvis\ModuleDocument\Models\Documentcat;
 use Darvis\Manta\Services\Openai;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Route;
@@ -17,9 +17,9 @@ trait DocumentcatTrait
     {
         $this->route_name = 'documentcat';
         $this->route_list = route($this->route_name . '.list');
-        $this->config = module_config('Documentcat');
+        $this->config = module_config('Documentcat', 'document');
         $this->fields = $this->config['fields'];
-        $this->moduleClass = 'Manta\Models\Documentcat';
+        $this->moduleClass = 'Darvis\ModuleDocument\Models\Documentcat';
     }
 
     public ?Documentcat $item = null;

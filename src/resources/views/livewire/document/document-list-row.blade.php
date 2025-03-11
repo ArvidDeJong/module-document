@@ -1,16 +1,3 @@
-<?php
-
-namespace App\Livewire\Manta\Document;
-
-use Manta\Models\Document;
-use Darvis\Manta\Traits\MantaPagerowTrait;
-
-new class extends \Livewire\Volt\Component {
-    public Document $item;
-
-    use MantaPagerowTrait;
-};
-?>
 <flux:table.row>
     <flux:table.cell><x-manta.tables.image :item="$item->upload" /></flux:table.cell>
     <flux:table.cell>{{ $item->title }}</flux:table.cell>

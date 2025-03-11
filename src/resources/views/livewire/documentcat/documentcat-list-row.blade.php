@@ -1,16 +1,3 @@
-<?php
-
-namespace App\Livewire\Manta\Documentcat;
-
-use Manta\Models\Documentcat;
-use Darvis\Manta\Traits\MantaPagerowTrait;
-
-new class extends \Livewire\Volt\Component {
-    public Documentcat $item;
-
-    use MantaPagerowTrait;
-};
-?>
 <flux:table.row data-id="{{ $item->id }}">
     <flux:table.cell class="handle"><i class="fa-solid fa-up-down"></i></flux:table.cell>
     <flux:table.cell> <x-manta.tables.image :item="$item->image" /></flux:table.cell>

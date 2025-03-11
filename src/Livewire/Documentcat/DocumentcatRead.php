@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Livewire\Manta\Documentcat;
+namespace Darvis\ModuleDocument\Livewire\Documentcat;
 
-use Manta\Models\Documentcat;
+use Darvis\ModuleDocument\Models\Documentcat;
 use Darvis\Manta\Traits\MantaTrait;
 use Livewire\Component;
 use Illuminate\Http\Request;

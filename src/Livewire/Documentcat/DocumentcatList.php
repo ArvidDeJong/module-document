@@ -41,6 +41,6 @@ class DocumentcatList extends Component
         $obj = $this->applySorting($obj);
         $obj = $this->applySearch($obj);
         $items = $obj->paginate(50);
-        return view('livewire.manta.documentcat.documentcat-list', ['items' => $items])->title($this->config['module_name']['multiple']);
+        return view('module-document::livewire.documentcat.documentcat-list', ['items' => $items])->title($this->config['module_name']['multiple']);
     }
 }

@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Livewire\Manta\Document;
+namespace Darvis\ModuleDocument\Livewire\Document;
 
-use Manta\Models\Document;
+use Darvis\ModuleDocument\Models\Document;
 use Darvis\Manta\Traits\MantaTrait;
 use Livewire\Component;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Route;
 
 class DocumentRead extends Component
 {
@@ -36,6 +38,6 @@ class DocumentRead extends Component
 
     public function render()
     {
-        return view('manta::default.manta-default-read')->title($this->config['module_name']['single'] . ' bekijken');
+        return View::make('manta::default.manta-default-read')->title($this->config['module_name']['single'] . ' bekijken');
     }
 }
